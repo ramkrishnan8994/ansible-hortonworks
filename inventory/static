@@ -7,8 +7,8 @@
 ######################################################
 
 [hdp-master]
-master01 ansible_host=192.168.0.2 ansible_user=root ansible_ssh_pass=changeme ambari_server=true
+master.localdomain ansible_host=192.168.56.109 ansible_user=root ansible_ssh_pass=ralapakr1! ambari_server=true
 
 [hdp-slave]
-slave01 ansible_host=192.168.0.3 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa"
+slave.localdomain ansible_host=192.168.56.110 ansible_user=root ansible_ssh_pass=ralapakr1!
 #slave02 ansible_host=192.168.0.4 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa"
