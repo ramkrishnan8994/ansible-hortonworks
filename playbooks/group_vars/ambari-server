@@ -5,8 +5,8 @@ ambari_admin_default_password: 'admin'                          # no need to cha
 wait: true                                                      # wait for the cluster to finish installing
 wait_timeout: 3600                                              # 60 minutes
 
-default_password: 'AsdQwe123456'                                # a default password for all required passwords which are not specified in the blueprint
-config_recommendation_strategy: 'NEVER_APPLY'
+default_password: 'ralapakr1!'                                # a default password for all required passwords which are not specified in the blueprint
+config_recommendation_strategy: 'ALWAYS_APPLY'
 
 cluster_template_file: 'cluster_template.j2'                    # the cluster creation template file
 
@@ -72,6 +72,7 @@ blueprint_dynamic:                                              # properties for
       - METRICS_COLLECTOR
       - METRICS_GRAFANA
       - METRICS_MONITOR
+      - ZEPPELIN_MASTER
   - role: "hdp-slave"
     clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'TEZ_CLIENT', 'SLIDER', 'PIG', 'SQOOP', 'HIVE_CLIENT', 'HCAT', 'OOZIE_CLIENT', 'INFRA_SOLR_CLIENT', 'SPARK2_CLIENT']
     services:
