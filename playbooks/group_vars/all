@@ -10,8 +10,8 @@ repo_base_url: 'file:///bin/HDPFiles/'     # change this if using a Local Reposi
 java: 'oraclejdk'                                          # can be set to 'embedded', 'openjdk' or 'oraclejdk'
 oraclejdk_options:                                        # only used when java is set to 'oraclejdk'
   base_folder: '/usr/java'                                # the folder where the Java package should be unpacked to
-  tarball_location: '/HDPFiles/jdk-8u112-linux-x64.tar.gz'     # the location of the tarball on the remote system or on the Ansible controller
-  jce_location: '/HDPFiles/jce_policy-8.zip'                   # the location of the JCE package on the remote system or on the Ansible controller
+  tarball_location: 'file:///bin/HDPFiles/jdk-8u112-linux-x64.tar.gz'     # the location of the tarball on the remote system or on the Ansible controller
+  jce_location: 'file:///bin/HDPFiles/jce_policy-8.zip'                   # the location of the JCE package on the remote system or on the Ansible controller
   remote_files: no                                        # set to yes to indicate the files are already on the remote systems, otherwise they will be copied by Ansible from the Ansible controller
 
 external_dns: no                                         # set to yes to use the existing DNS (when no, it will update the /etc/hosts file - must be set to 'no' when using Azure)
