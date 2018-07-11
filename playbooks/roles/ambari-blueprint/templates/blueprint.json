@@ -1,0 +1,95 @@
+{
+  "configurations" : [
+    {
+      "core-site": {
+        "hadoop.proxyuser.hcat.groups" : "*",
+        "hadoop.proxyuser.hcat.hosts" : "*",
+        "hadoop.proxyuser.hue.groups" : "*",
+        "hadoop.proxyuser.hue.hosts" : "*",
+        "hadoop.proxyuser.root.groups" : "*",
+        "hadoop.proxyuser.root.hosts" : "*"
+      }
+    },
+    {
+      "hadoop-env" : {
+        "dtnode_heapsize" : "1024m",
+        "namenode_heapsize" : "2048m",
+        "namenode_opt_maxnewsize" : "384m",
+        "namenode_opt_newsize" : "384m"
+      }
+    },
+    {
+      "hdfs-site" : {
+        "dfs.datanode.data.dir" : "/hadoop/hdfs/data",
+        "dfs.datanode.failed.volumes.tolerated" : "0",
+        "dfs.replication" : "2"
+      }
+    }
+  ],
+  "host_groups" : [
+    {
+      "name" : "hdp-master",
+      "configurations" : [ ],
+      "components" : [
+        { "name" : "ZOOKEEPER_CLIENT" },
+        { "name" : "HDFS_CLIENT" },
+        { "name" : "YARN_CLIENT" },
+        { "name" : "MAPREDUCE2_CLIENT" },
+        { "name" : "TEZ_CLIENT" },
+        { "name" : "SLIDER" },
+        { "name" : "PIG" },
+        { "name" : "SQOOP" },
+        { "name" : "HIVE_CLIENT" },
+        { "name" : "HCAT" },
+        { "name" : "OOZIE_CLIENT" },
+        { "name" : "INFRA_SOLR_CLIENT" },
+        { "name" : "SPARK2_CLIENT" },
+        { "name" : "ZOOKEEPER_SERVER" },
+        { "name" : "NAMENODE" },
+        { "name" : "SECONDARY_NAMENODE" },
+        { "name" : "RESOURCEMANAGER" },
+        { "name" : "APP_TIMELINE_SERVER" },
+        { "name" : "HISTORYSERVER" },
+        { "name" : "SPARK2_JOBHISTORYSERVER" },
+        { "name" : "HIVE_SERVER" },
+        { "name" : "HIVE_METASTORE" },
+        { "name" : "WEBHCAT_SERVER" },
+        { "name" : "OOZIE_SERVER" },
+        { "name" : "AMBARI_SERVER" },
+        { "name" : "INFRA_SOLR" },
+        { "name" : "METRICS_COLLECTOR" },
+        { "name" : "METRICS_GRAFANA" },
+        { "name" : "METRICS_MONITOR" },
+        { "name" : "ZEPPELIN_MASTER" },
+        { "name" : "DATANODE" }
+      ]
+    },
+    {
+      "name" : "hdp-slave",
+      "configurations" : [ ],
+      "components" : [
+        { "name" : "ZOOKEEPER_CLIENT" },
+        { "name" : "HDFS_CLIENT" },
+        { "name" : "YARN_CLIENT" },
+        { "name" : "MAPREDUCE2_CLIENT" },
+        { "name" : "TEZ_CLIENT" },
+        { "name" : "SLIDER" },
+        { "name" : "PIG" },
+        { "name" : "SQOOP" },
+        { "name" : "HIVE_CLIENT" },
+        { "name" : "HCAT" },
+        { "name" : "OOZIE_CLIENT" },
+        { "name" : "INFRA_SOLR_CLIENT" },
+        { "name" : "SPARK2_CLIENT" },
+        { "name" : "DATANODE" },
+        { "name" : "NODEMANAGER" },
+        { "name" : "METRICS_MONITOR" }
+      ]
+    }
+  ],
+  "Blueprints" : {
+    "blueprint_name" : "Goals101_blueprint",
+    "stack_name" : "HDP",
+    "stack_version" : "2.6"
+  }
+}
