@@ -62,11 +62,11 @@
         { "name" : "METRICS_MONITOR" },
         { "name" : "ZEPPELIN_MASTER" },
         { "name" : "DATANODE" },
-	{ "name" : "MYSQL_SERVER" }
+	      { "name" : "MYSQL_SERVER" }
       ]
     },
     {
-      "name" : "hdp-slave",
+      "name" : "hdp-slave1",
       "configurations" : [ ],
       "components" : [
         { "name" : "ZOOKEEPER_CLIENT" },
@@ -86,7 +86,29 @@
         { "name" : "NODEMANAGER" },
         { "name" : "METRICS_MONITOR" }
       ]
-    }
+    },
+    {
+      "name" : "hdp-slave2",
+      "configurations" : [ ],
+      "components" : [
+        { "name" : "ZOOKEEPER_CLIENT" },
+        { "name" : "HDFS_CLIENT" },
+        { "name" : "YARN_CLIENT" },
+        { "name" : "MAPREDUCE2_CLIENT" },
+        { "name" : "TEZ_CLIENT" },
+        { "name" : "SLIDER" },
+        { "name" : "PIG" },
+        { "name" : "SQOOP" },
+        { "name" : "HIVE_CLIENT" },
+        { "name" : "HCAT" },
+        { "name" : "OOZIE_CLIENT" },
+        { "name" : "INFRA_SOLR_CLIENT" },
+        { "name" : "SPARK2_CLIENT" },
+        { "name" : "DATANODE" },
+        { "name" : "NODEMANAGER" },
+        { "name" : "METRICS_MONITOR" }
+      ]
+    },
   ],
   "Blueprints" : {
     "blueprint_name" : "Goals101_blueprint",
