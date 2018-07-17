@@ -143,3 +143,4 @@ Currently, these playbooks are divided into the following parts:
 - [ ] Make use of additional storage for HDP workers
 - [ ] Make use of additional storage for master services
 - [ ] Configure additional storage for NiFi
+# hdp-ambari

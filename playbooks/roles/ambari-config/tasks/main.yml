@@ -126,16 +126,9 @@
       when: ambari_version is version_compare('2.6', '<')
 
     - block:
-        - name: Attempt to read the HDP repo build.id file (Ambari >= 2.6)
-          uri:
-            url: "{{ hdp_main_repo_url }}/build.id"
-            method: GET
-            return_content: yes
-          register: hdp_repo_build_id
-
         - name: Set the HDP build number (Ambari >= 2.6)
           set_fact:
-            hdp_build_number: "{{ (hdp_repo_build_id.content|from_yaml).BUILD_NUMBER }}"
+            hdp_build_number: "292"
 
         - name: Upload the HDP Version Definition file (Ambari >= 2.6)
           template:

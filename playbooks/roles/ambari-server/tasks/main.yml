@@ -18,7 +18,6 @@
 - name: Install the ambari-server package
   package:
     name: ambari-server
-    update_cache: yes
     state: latest
   notify: Reload systemd
 
@@ -28,7 +27,6 @@
     - name: Install mysql database required packages (for hive embedded)
       package:
         name: "{{ item }}"
-        update_cache: yes
         state: present
       with_items: "{{ mysql_packages }}"
 

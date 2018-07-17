@@ -2,7 +2,6 @@
 - name: Install the ambari-agent package
   package:
     name: ambari-agent
-    update_cache: yes
     state: latest
   notify: Reload systemd
 
